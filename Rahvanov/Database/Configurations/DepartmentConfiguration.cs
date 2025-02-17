@@ -30,10 +30,10 @@ namespace Rahvanov.Database.Configurations
                    .IsRequired()
                    .HasComment("Год основания кафедры");
 
-            // Уникальность для HeadTeacherId
+            // Уникальность для HeadTeacherId (обязательно перед Foreign Key!)
             builder.HasIndex(d => d.HeadTeacherId)
-                   .IsUnique()  // Уникальность для HeadTeacherId
-                   .HasName("unique_head_teacher_id");  // Имя индекса для уникальности
+                   .IsUnique()
+                   .HasDatabaseName("unique_head_teacher_id");  // Индекс уникальности
 
             // Связь с заведующим кафедрой
             builder.HasOne(d => d.HeadTeacher)
@@ -41,11 +41,9 @@ namespace Rahvanov.Database.Configurations
                    .HasForeignKey<Department>(d => d.HeadTeacherId)
                    .HasConstraintName("fk_department_head_teacher")
                    .OnDelete(DeleteBehavior.Cascade)
-                   .IsRequired();  // Связь с заведующим кафедры
+                   .IsRequired();
 
-            // Индексы
-            builder.HasIndex(d => d.HeadTeacherId)
-                   .HasName($"idx_departments_fk_f_headteacher");
+
 
             builder.HasIndex(d => d.Name)
                    .HasName($"idx_departments_name");
