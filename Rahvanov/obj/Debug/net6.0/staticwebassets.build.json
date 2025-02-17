@@ -1,11 +1,12 @@
 {
   "Version": 1,
-  "Hash": "P2xNxLEQZULKA7N7RPa0wA0fFAVkh3DTSdJOqGjqoTc=",
+  "Hash": "lWM1Khrgpibbwbk8xPxZU5l/rS2yLkgBtOTDKgzFvUE=",
   "Source": "Rahvanov",
   "BasePath": "_content/Rahvanov",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [],
-  "Assets": []
+  "Assets": [],
+  "Endpoints": []
 }
