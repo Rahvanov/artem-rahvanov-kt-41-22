@@ -1,5 +1,22 @@
 [
   {
+    "ContainingType": "Rahvanov.Controllers.DepartmentGetController",
+    "Method": "GetTeachersByDepartmentAsync",
+    "RelativePath": "DepartmentGet",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "filter",
+        "Type": "Rahvanov.Filters.TeacherFilters.DepartmentFilter",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "EndpointName": "GetTeachersByDepartments"
+  },
+  {
     "ContainingType": "Rahvanov.Controllers.WeatherForecastController",
     "Method": "Get",
     "RelativePath": "WeatherForecast",
