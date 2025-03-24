@@ -112,5 +112,21 @@
       }
     ],
     "EndpointName": "AddNewSummary"
+  },
+  {
+    "ContainingType": "Rahvanov.Controllers.WorkloadController",
+    "Method": "GetWorkloadsByFilterAsync",
+    "RelativePath": "Workload/filter-workloads",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "filter",
+        "Type": "Rahvanov.Filters.WorkloadFilter",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   }
 ]

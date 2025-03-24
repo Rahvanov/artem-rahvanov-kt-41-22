@@ -10,6 +10,8 @@ namespace Rahvanov.ServiceExtensions
             services.AddScoped<ITeacherService, TeacherService>();
             services.AddScoped<IDepartmentService, DepartmentService>();
             services.AddScoped<IDisciplineService, DisciplineService>();
+            services.AddScoped<IWorkloadService, WorkloadService>();
+
 
             return services;
         }
