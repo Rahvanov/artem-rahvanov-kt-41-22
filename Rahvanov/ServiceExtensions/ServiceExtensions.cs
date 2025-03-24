@@ -8,6 +8,9 @@ namespace Rahvanov.ServiceExtensions
         public static IServiceCollection AddServices(this IServiceCollection services)
         {
             services.AddScoped<ITeacherService, TeacherService>();
+            services.AddScoped<IDepartmentService, DepartmentService>();
+            services.AddScoped<IDisciplineService, DisciplineService>();
+
             return services;
         }
     }

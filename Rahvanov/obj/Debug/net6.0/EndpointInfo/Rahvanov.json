@@ -69,6 +69,68 @@
         }
       }
     },
+    "/DepartmentGet/filter-departments": {
+      "post": {
+        "tags": [
+          "DepartmentGet"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DepartmentFullFilter"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DepartmentFullFilter"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/DepartmentFullFilter"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/Discipline/filter-disciplines": {
+      "post": {
+        "tags": [
+          "Discipline"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DisciplineFilter"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DisciplineFilter"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/DisciplineFilter"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
     "/WeatherForecast": {
       "get": {
         "tags": [
@@ -162,6 +224,52 @@
         "properties": {
           "name": {
             "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "DepartmentFullFilter": {
+        "type": "object",
+        "properties": {
+          "foundedAfter": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "foundedBefore": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "minTeachersCount": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "maxTeachersCount": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "DisciplineFilter": {
+        "type": "object",
+        "properties": {
+          "teacherName": {
+            "type": "string",
+            "nullable": true
+          },
+          "minHours": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "maxHours": {
+            "type": "integer",
+            "format": "int32",
             "nullable": true
           }
         },

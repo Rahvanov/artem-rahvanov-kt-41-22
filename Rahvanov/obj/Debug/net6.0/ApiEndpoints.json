@@ -34,6 +34,38 @@
     "EndpointName": "GetTeachersByDegreeAndPosition"
   },
   {
+    "ContainingType": "Rahvanov.Controllers.DepartmentGetController",
+    "Method": "GetDepartmentsWithFiltersAsync",
+    "RelativePath": "DepartmentGet/filter-departments",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "filter",
+        "Type": "Rahvanov.Filters.TeacherFilters.DepartmentFullFilter",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Rahvanov.Controllers.DisciplineController",
+    "Method": "GetDisciplinesByFilterAsync",
+    "RelativePath": "Discipline/filter-disciplines",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "filter",
+        "Type": "Rahvanov.Filters.DisciplineFilter",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Rahvanov.Controllers.WeatherForecastController",
     "Method": "Get",
     "RelativePath": "WeatherForecast",
