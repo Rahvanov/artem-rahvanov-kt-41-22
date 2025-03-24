@@ -37,6 +37,38 @@
         }
       }
     },
+    "/DepartmentGet/filter-by-degree-position": {
+      "post": {
+        "tags": [
+          "DepartmentGet"
+        ],
+        "operationId": "GetTeachersByDegreeAndPosition",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TeacherFilter"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TeacherFilter"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/TeacherFilter"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
     "/WeatherForecast": {
       "get": {
         "tags": [
@@ -129,6 +161,20 @@
         "type": "object",
         "properties": {
           "name": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "TeacherFilter": {
+        "type": "object",
+        "properties": {
+          "academicDegreeName": {
+            "type": "string",
+            "nullable": true
+          },
+          "positionName": {
             "type": "string",
             "nullable": true
           }

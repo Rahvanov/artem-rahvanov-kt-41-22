@@ -25,5 +25,13 @@ namespace Rahvanov.Controllers
             var teachers = await _teacherService.GetTeachersByDepartmentAsync(filter, cancellationToken);
             return Ok(teachers);
         }
+        [HttpPost("filter-by-degree-position", Name = "GetTeachersByDegreeAndPosition")]
+        public async Task<IActionResult> GetTeachersByFilterAsync(TeacherFilter filter, CancellationToken cancellationToken)
+        {
+            var teachers = await _teacherService.GetTeachersByFilterAsync(filter, cancellationToken);
+            return Ok(teachers);
+        }
+
+
     }
 }
